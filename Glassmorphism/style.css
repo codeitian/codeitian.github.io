@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: verdana;
+    color: white;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, rgb(133, 173, 216), rgb(123, 188, 151))
+}
+
+.card{
+    position: relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(234, 234, 234, 0.5));
+    box-shadow: 0 5px 32px 0 rgba(0, 0, 0, 0.37);
+    height: 450px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cirkol1{
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(64, 255, 0, 0.5));
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    z-index: -1;
+    box-shadow:  0 0px 20px 0 rgba(0, 0, 0, 0.37);
+    animation-name: GoDown;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+}
+
+.cirkol2{
+    position: absolute;
+    bottom: 20px;
+    right: 80px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(0, 47, 255, 0.5));
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    z-index: -1;
+    box-shadow:  0 0px 20px 0 rgba(0, 0, 0, 0.37);
+    animation-name: GoUp;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+}
+
+@keyframes GoDown {
+    0%{}
+    100%{top: 430px}
+}
+
+@keyframes GoUp {
+    0%{}
+    100%{bottom: 430px}
+}
+
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 400px){
+    h1{
+        font-size: 1rem;
+    }
+}
