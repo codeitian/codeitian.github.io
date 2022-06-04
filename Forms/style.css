@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: verdana;
+}
+
+body{
+    background: linear-gradient(180deg, rgb(240, 217, 166), rgb(219, 95, 147));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:20px 0;
+}
+
+.login{
+    position: relative;
+    height: 500px;
+    width:350px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    padding-top: 80px;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.4);
+    margin: 40px;
+}
+
+.login span{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top:0;
+    left: 0;
+    background: linear-gradient(to right, rgb(81, 197, 254),rgb(153, 86, 253));
+    text-align: center;
+    line-height: 40px;
+    color: #ffffff;
+}
+
+.login input{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    resize: none;
+    height: 30px;
+    width: 100%;
+    padding: 5px;
+    border:none;
+    border-bottom: 2px solid rgb(153, 86, 253);
+}
+
+.login a{
+    font-size: 12px;
+    color:blue;
+}
+
+.login button{
+  margin-top: 50%;
+  background: linear-gradient(to right, rgb(81, 197, 254),rgb(153, 86, 253));
+  border: none;
+  height: 30px;
+  border-radius:25px;
+  color:white;
+}
+
+.logo{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    top: 20px;
+    left: 20px;
+}
+/* //////////////////////////////////////////////////////////// */
+
+.contact{
+    background-color: white;
+    width: 800px;
+    height:500px;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.4);
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 50px;
+    display: flex;
+    overflow:hidden;
+}
+
+.contact label{
+    font-weight: bolder;
+    font-family: tahoma;
+}
+
+.left{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background: linear-gradient(to bottom, rgb(153, 86, 253) 25%, rgb(0, 0, 0, 0) 25%)
+}
+
+.left h1{
+    margin-bottom: 50px;
+    font-size: 3rem;
+    color:white;
+}
+
+.left input{
+    margin-bottom: 20px;
+    margin-top: 5px;
+    height: 30px;
+    border:none;
+    border-bottom: 2px solid rgb(153, 86, 253);
+    padding: 5px;
+}
+
+.right{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background: linear-gradient(to bottom, rgb(153, 86, 253) 25%, rgb(0, 0, 0, 0) 25%)
+}
+
+.right label{
+    margin-top: 6.5rem;
+}
+
+.right textarea{
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+    resize: none;
+    border: 2px solid rgb(153, 86, 253);
+    border-radius: 10px;
+}
+
+.contact button{
+    background: linear-gradient(to right, rgb(81, 197, 254),rgb(153, 86, 253));
+    border: none;
+    height: 30px;
+    border-radius:25px;
+    color:white;
+    width: 100px;
+    align-self: flex-end;
+  }
