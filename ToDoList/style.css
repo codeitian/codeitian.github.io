@@ -1,0 +1,138 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: Tahoma;
+}
+
+header{
+  position: relative;
+  background-color: #2b2b3d;
+  padding: 10px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+header h2{
+  text-align: center;
+  color: white;
+}
+
+label{
+  position: relative;
+  height: 40px;
+  margin-left: 20px;
+  font-family: verdana;
+}
+
+.logo{
+  position: absolute;
+  height: 3rem;
+  width: 3rem;
+  top: 2px;
+}
+
+.container{
+  position: relative;
+  width: auto;
+  max-width: 600px;
+  height: auto;
+  padding: 10px 20px;
+  background-color:  #f4f4f4;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px
+}
+
+#addTask{
+  width: 75%;
+  padding: 5px;
+  font-size: 11px;
+  margin-right: 5px;
+}
+
+.addBtn{
+  width: 40px;
+  background-color: #1f1f1f;
+  color: #e6e6e6;
+  padding: 0 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 10px;
+  margin-right: 5px;
+  transition: .3s linear;
+}
+
+.cancelBtn{
+  width: 40px;
+  background-color: #e6e6e6;
+  color: #1f1f1f;
+  padding: 0 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 10px;
+  transition: .3s linear;
+}
+
+.addBtn:hover{
+  color: white;
+  box-shadow: 0 0 6px grey;
+}
+
+.cancelBtn:hover{
+  color: black;
+  box-shadow: 0 0 5px grey
+}
+
+.taskList{
+  position: relative;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  background-color:  #f4f4f4;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px;
+  max-width: 600px;
+}
+
+.task{
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.doneBtn{
+  text-align: center;
+  font-size: 15px;
+  background-color: red;
+  border: none;
+  padding: 0 5px;
+  border-radius: 5px;
+  transition: .2s ease-in;
+}
+
+.doneBtn:hover{
+  box-shadow: 0 0 5px grey;
+  color: white;
+}
+
+.nothing{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.nothing p{
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+  color: grey;
+}
