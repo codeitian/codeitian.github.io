@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Simple Gallery</title>
+</head>
+<body>
+    <div class="banner">
+        <img src="myOfficialLogoWhite.png" alt="" class="logo">
+        <h3>Simple Gallery</h3>
+    </div>
+
+    <div class="wrapper">
+        <div class="bigImg" >
+            <span id="noPreview"><p>Click an image to preview.</p></span>
+            <div id="display"><img src="" alt="" id="preview"></div>
+        </div>
+
+        <div class="images">
+            <div><img src="boy1.jpg" alt="" onclick="enlargeImg(this.src)"></div>
+            <div><img src="boy2.jpg" alt="" onclick="enlargeImg(this.src)"></div>
+            <div><img src="boy3.jpg" alt="" onclick="enlargeImg(this.src)"></div>
+            <div><img src="gurl1.jpg" alt="" onclick="enlargeImg(this.src)"></div>
+            <div><img src="gurl2.jpg" alt="" onclick="enlargeImg(this.src)"></div>
+            <div><img src="gurl3.jpg" alt="" onclick="enlargeImg(this.src)"></div>
+            <div><img src="gurl4.jpg" alt="" onclick="enlargeImg(this.src)"></div>
+            <div><img src="gurl5.jpg" alt="" onclick="enlargeImg(this.src)"></div>
+            <div><img src="some1.jpg" alt="" onclick="enlargeImg(this.src)"></div>
+        </div>
+    </div>
+    
+
+    <h5  id="myname">©2022 by Christian Virrey</h5>
+
+    <script src="main.js"></script>
+</body>
+</html>
