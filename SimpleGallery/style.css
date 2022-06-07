@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+}
+.banner{
+    background-color: #2b2b3d;
+    height: 50px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: verdana;
+}
+
+.logo{
+    height: 100%;
+}
+
+.wrapper{
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+}
+
+.bigImg{
+    position: relative;
+    height: 100%;
+    width: 40%;
+    background-color: white;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.bigImg span{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    background-color: #fff;
+    z-index: 11;
+}
+
+.bigImg span p{
+    position:absolute;
+    transform: translateY(50%);
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    color: black;
+    font-family: tahoma;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.bigImg div{
+    position: relative;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.bigImg div img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade{
+    0% {opacity: .3}
+    100% {opacity: 1}
+}
+
+.images{
+    position: relative;
+    height: 100%;
+    width: 60%;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-auto-rows: 100px;
+    grid-gap: 5px;
+    justify-content: center;
+    padding: 20px 0;
+    border-left: 2px solid #2b2b3d;
+}
+
+.images div{
+    border: 1px solid rgb(255, 255, 255, 0.4);
+    position: relative;
+    align-items: center;
+}
+
+.images div img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .3s linear;
+}
+
+.images div img:hover{
+    opacity: 50%;
+    filter: brightness(80%);
+}
+
+#myname{
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    font-family: tahoma;
+}
