@@ -1,0 +1,139 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    color:white;
+    font-family: verdana;
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background-color: #2b2b3d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar.scrolled{
+    position: fixed;
+    top: 0;
+    height: 50px;
+    transition: .3s linear;
+}
+
+.logo{
+    position:relative;
+    height: 45px;
+    width: 45px;
+    margin-left: 10px;
+}
+
+.logo img{
+    position:absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+
+.navbarlinks{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbarlinks li {
+    list-style: none;
+}
+
+.navbarlinks li a{
+    position: relative;
+    margin: 0 10px;
+    padding: 10px;
+    text-decoration: none;
+    transition: .3s linear;
+}
+
+.navbarlinks a:after, a.active::after{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height:2px;
+    width: 0;
+    background-color: steelblue;
+    transition: .3s linear;
+}
+
+.navbarlinks a:hover::after, a.active::after{
+    left: 0%;
+    width: 100%;
+}
+
+body section{
+    height:100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body section h3{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#home{
+    background-color: steelblue;
+}
+
+#about{
+    background-color: rgb(58, 107, 147) ;
+}
+
+#works{
+    background-color: rgb(43, 79, 109) ;
+}
+
+#services{
+    background-color: rgb(26, 48, 66) ;
+}
+
+#contact{
+    background-color: rgb(14, 25, 34) ;
+}
+
+
+@media screen and (max-width:600px) {
+    .navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        box-shadow: 0 5px 10px rgb(17, 17, 17, 0.4);
+    }
+
+    .navbar .logo{
+        display:none;
+    }
+
+    .navbar .navbarlinks{
+        display: block;
+        text-align: center;
+    }
+
+    .navbarlinks li{
+        margin: 15px 0;
+    }
+
+    .navbar.scrolled{
+        position: fixed;
+        top: 0;
+        height: auto;
+        transition: .3s linear;
+    }
+}
