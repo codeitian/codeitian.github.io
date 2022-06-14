@@ -1,0 +1,29 @@
+body{
+    line-height: 50px;
+    background-color: #2b2b3d;
+    color: #fff;
+    font-family: verdana;
+}
+
+html{
+    scrollbar-width: normal;
+    scrollbar-color: red green;
+}
+
+html::-webkit-scrollbar{
+    width: 1vw;
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: #a2a2e6;
+    border-radius: 20px;
+}
+
+html::-webkit-scrollbar-thumb:hover{
+   background-color: blue;
+}
+
+
+html::-webkit-scrollbar-track{
+    background-color: rgb(20, 20, 29, 0.3);
+}
