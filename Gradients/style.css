@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: verdana;
+}
+
+.wrapper{
+    min-height: 100vh;
+    width: 100%;
+    background: #080820;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.banner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    height: auto;
+}
+
+.banner h1{
+    letter-spacing: 20px;
+    text-align: center;
+    font-size: 3rem;
+    background: linear-gradient(
+            to right, #2133f3, #08efff,
+             #6041a2, #47f2f5);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+
+    text-shadow: 0 0 50px rgb(129, 236, 255),
+                 0 0 70px rgb(207, 248, 255);
+}
+
+.box{
+    position: relative;
+    height: 300px;
+    width: 250px;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to bottom left, lightblue, blue, rgb(18, 18, 101), rgb(16, 15, 28), cyan);
+    border-image-slice: 1;
+    box-shadow: 0 5px 5px rgb(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(185, 225, 255);
+    margin-top: 30px;
+}
+
+.box1{
+    margin-top: 30px;
+    position: relative;
+    height: 200px;
+    width: 500px;
+    border: none;
+    background: linear-gradient(to right, rgb(151, 227, 227), rgb(122, 101, 255));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #080820;
+}
+
+.btnGlow{
+    margin: 50px;
+    padding: 20px;
+    border-radius: 30px;
+    border: transparent;
+    background: radial-gradient(rgb(0, 156, 208), cyan);
+    transition: .3s ease-in;
+    color: #080820;
+}
+
+.btnGlow:hover{
+    box-shadow: 0 0 20px cyan;
+    color: #fff;
+}
