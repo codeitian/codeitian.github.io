@@ -1,0 +1,147 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: verdana;
+}
+
+body{
+    
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(to right, rgb(0, 162, 255), rgb(36, 36, 154));
+}
+
+.container{
+    position: relative;
+    height: 60vh;
+    width: 30vw;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+}
+
+.box{
+    position:absolute;
+    height:250px;
+    width: 250px;
+    top: 34px;
+    left: 45.5px;
+    /* transform: rotate(-90deg); */
+    transform-style: preserve-3d;
+    animation: animate 3s infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+    0%{ transform: rotateX(45deg) rotateY(-45deg);}
+    25%{ transform: rotateX(-45deg) rotateY(-45deg);}
+    50%{ transform: rotateX(45deg) rotateY(45deg);}
+    75%{ transform: rotateX(-45deg) rotateY(45deg);}
+    100%{ transform: rotateX(45deg) rotateY(-145deg);}
+
+
+}
+
+.card{
+    position: absolute;
+    height:250px;
+    width: 250px;
+    text-align: center;
+    padding: 100px 0px;
+    color: #fff;
+    background: #080820;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, cyan, rgb(0, 8, 255));
+    border-image-slice: 1;
+    font-size: 2rem;
+    box-sizing: border-box;
+    transition: all 1s;
+}
+
+#front{
+    transform: translateZ(125px);
+}
+
+#back{
+    transform: translateZ(-125px);
+}
+
+#left{
+    right: 125px;
+    transform: rotateY(-90deg);
+}
+
+#right{
+    left: 125px;
+    transform: rotateY(90deg);
+}
+
+#bottom{
+    top: 125px;
+    transform: rotateX(-90deg);
+}
+
+#top{
+    bottom: 125px;
+    transform: rotateX(90deg);
+}
+
+#button1{
+    padding: 12px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+    transition: .3s;
+    cursor: pointer;
+    position: absolute;
+    top: -80px;
+    left: -100px;
+}
+
+#button1:hover{
+    background-color: #cacaca;
+    color: #080820;
+}
+
+input:focus{
+    color:red;
+}
+
+input:focus~ .box #front{
+    transform: translateZ(180px) rotateY(360deg);
+    background-color: #fff;
+    color: #111;
+}
+
+input:focus ~ .box #back{
+    transform: translateZ(-180px) rotateY(360deg);
+    background-color: #fff;
+    color: #111;
+}
+
+input:focus ~ .box #left{
+    right: 180px;
+    background-color: #fff;
+    color: #111;
+}
+
+input:focus ~ .box #right{
+    left: 180px;
+    background-color: #fff;
+    color: #111;
+}
+
+input:focus ~ .box #top{
+    bottom: 180px;
+    background-color: #fff;
+    color: #111;
+}
+
+input:focus ~ .box #bottom{
+    top: 180px;
+    background-color: #fff;
+    color: #111;
+}
