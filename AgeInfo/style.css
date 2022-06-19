@@ -1,0 +1,206 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: verdana;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height:auto;
+    min-width: 100vh;
+    width: 100%;
+}
+
+.wrapper .container{
+    position: relative;
+    min-height:100%;
+    width: 60%;
+    padding: 20px;
+}
+
+.wrapper .container h1{
+    min-height: 100px;
+    color: green;
+}
+
+.wrapper .container .age{
+    position: relative;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* justify-content: center; */
+    width: 100%;
+    height: 50px;
+}
+
+.text-for-age{
+    color: green;
+}
+
+.text-box{
+    width: 80px;
+    margin: 0 5px;
+    border: .5px solid grey;
+    padding-left: 3px;
+}
+
+.text-box:focus{
+    border: 2px solid green;
+    border-radius: 3px;
+    outline: none;
+    padding-left: 3px;
+}
+
+.btn1{
+    padding: 2px 10px;
+    border: .5px solid green;
+    color: green;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.btn1:hover{
+    border: .5px solid #eee;
+    color: #eee;
+    background: green;
+}
+
+.wrapper .container .text{
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    padding: 10px;
+}
+
+.text p{
+    text-align: justify;
+    text-indent: 40px;
+    font-size: .9rem;
+}
+
+.wrapper .imgcontainer{
+    position: relative;
+    height:100%;
+    min-height:100%;
+    width: 40%;
+}
+   
+
+.container1{
+    position: relative;
+    height: 400px;
+    width: 100%;
+    border-bottom: 1px solid green;
+    background-color: rgb(0, 128, 0, 0.4);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.container1 img{
+    position: absolute;
+    height: 100%;
+    width: 90%;
+    object-fit: contain;
+}
+
+@keyframes fade {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+.container2{
+   background-color: rgb(229, 228, 228);
+   margin-bottom: 100px;
+}
+
+.belong{
+    color: green;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#infobar{
+    padding: 20px;
+}
+
+#infobar>p{
+    font-size: .9rem;
+    color: green;
+}
+
+#infobar>div{
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    width: 95%;
+    height: 10px;
+    border: .5px solid green;
+    margin: 10px 0;
+}
+
+#time{
+    position:absolute;
+    top:0;
+    left: 0;
+    width:0%;
+    background-color: green;
+    height:100%;
+    border-radius: 10px;
+}
+
+#money{
+    position:absolute;
+    top:0;
+    left: 0;
+    width:0%;
+    background-color: green;
+    height:100%;
+    border-radius: 10px;
+}
+
+#energy{
+    position:absolute;
+    top:0;
+    left: 0;
+    width:0%;
+    background-color: green;
+    height:100%;
+    border-radius: 10px;
+   animation-fill-mode: forwards;
+}
+
+@keyframes width{
+    from{width: 0%; opacity:1}
+    to{width: 100%; opacity:.1}
+}
+
+.imgcontainer>p{
+    text-align: center;
+    font-size: .7rem;
+}
+
+.ffacts{
+    position: relative;
+    width: 100%;
+    min-height: 150px;
+    border: 3px solid green;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.ffacts h4{
+    color: green;
+    margin-bottom: 10px;
+}
+
+.ffacts p{
+    position:relative;
+    font-style: italic;
+    text-align: center;
+}
