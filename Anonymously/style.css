@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #eee;
+}
+
+body{
+    background-color: #080820;
+    width: 100%;
+    height: 100vh;
+}
+
+.cover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.logo{
+  display: none;
+}
+
+.cover h1{
+  color: lightblue;
+  text-align: center;
+}
+
+@media screen and (max-width: 700px){
+  .cover{
+    display: none;
+    z-index: -1;
+  }
+
+  .header{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+  }
+
+  .header h3{
+    color: lightblue;
+    font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .header p{
+    font-size: .8em;
+  }
+
+  .logo{
+    display: block;
+    height: 80px;
+    width: 80px;
+    filter: brightness(100);
+    margin-bottom: 10px;
+  }
+
+  form{
+    width: 100%;
+    padding: 10px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+  }
+
+  label{
+    margin-left: 9px;
+  }
+
+  label.animate{
+    animation-name: ccolors;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;  animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes ccolors {
+    0%{color: red;}
+      10%{color: orange;}
+        25%{color: yellow;}
+          50%{color: green;}
+            75%{color: blue;}
+              100%{color: purple;}
+  }
+
+  form textarea{
+    color: #082020;
+    width: 95%;
+    height: auto;
+    overflow-y: hidden;
+    padding: 10px;
+    outline: none;
+    margin: 5px auto;
+    border-radius: 5px;
+    font-size: .8rem;
+  }
+
+  form textarea:focus{
+    border: 2px solid lightblue;
+  }
+
+  form textarea::placeholder{
+    font-style: italic;
+  }
+
+  form button{
+    outline: none;
+    background-color: lightblue;
+    border: 1px solid transparent;
+    padding: 8px;
+    border-radius: 5px;
+    color: #080820;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 5px black;
+  }
+
+  .btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  form button .fa{
+    margin-left: 5px;
+    font-size: .9rem;
+    color: #080820;
+  }
+
+  .ps{
+    text-align: center;
+    position: relative;
+    font-size: .65rem;
+    padding-top: 30px;
+    font-style: italic;
+    opacity: 0;
+  }
+
+  .name{
+    font-size: .6rem;
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 5px;
+    opacity: .4;
+  }
+
+}
