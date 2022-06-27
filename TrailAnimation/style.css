@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(27, 38, 82);
+    height: 100vh;
+    overflow: hidden;
+    margin:0;
+    padding: 0;
+}
+
+span{
+    background: url("https://cdn3.iconfinder.com/data/icons/iconpark-vol-3/48/bubble-chart-256.png");
+    height:100px;
+    width: 100px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    background-position: center;
+    background-size: cover;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: animate 7s linear;
+}
+
+@keyframes animate{
+    0%{ transform: translate(-50%, -50%);
+            opacity: 1;
+            filter: hue-rotate(0deg);
+            filter: brightness(100%);
+    }
+
+    100%{ transform: translate(-50%, -5000%);
+        opacity: 0;
+        filter: hue-rotate(360deg);
+        filter: brightness(10000%);
+    }
+}
