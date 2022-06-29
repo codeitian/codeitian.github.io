@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: verdana;
+}
+
+body{
+    background: linear-gradient(to bottom, rgb(0, 21, 255),rgb(151, 151, 239));
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+h1{
+    margin: 20px 0;
+    color: #fff;
+    text-shadow: 2px 2px 4px #111;
+}
+
+.container{
+    position: relative;
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter-container{
+    height: 250px;
+    width: 200px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.6);
+}
+
+.fa{
+    position: absolute;
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0 3px 3px rgba(0,0,0,0.4);
+    transition: opacity .2s;
+}
+
+.fa:hover{
+    opacity: 0.8;
+}
+
+.increment{
+    right: 70px;
+}
+
+.increment:hover{
+    color: rgb(0, 255, 0);
+}
+
+.decrement{
+    left: 70px;
+}
+
+.decrement:hover{
+    color: rgb(255, 0, 0);
+}
+
+.counter{
+    position: absolute;
+    font-family: 'Roboto Mono', monospace;
+    color: #111;
+    font-size: 9rem;
+    top:45px;
+}
+
+
+@keyframes slideUp {
+    from{opacity:0;  top: 140px;}
+    to{opacity:1;  top: 45px;}
+}
+
+@keyframes slideDown{
+    from{opacity:0;  top: -45px;}
+    to{opacity:1;  top: 40px;}
+}
+
+@media screen and (max-width: 600px){
+
+    .counter-container{
+        height: 200px;
+        width: 150px;
+    }
+
+    .increment{
+        right: 125px;
+    }
+
+    .decrement{
+        left: 125px;
+    }
+
+    .counter{
+        font-size: 6rem;
+        top: 80px;
+    }
+
+    @keyframes slideUp {
+        from{opacity:0;  top: 140px;}
+        to{opacity:1;  top: 80px;}
+    }
+    
+    @keyframes slideDown{
+        from{opacity:0;  top: -30px;}
+        to{opacity:1;  top: 80px;}
+    }
+}
