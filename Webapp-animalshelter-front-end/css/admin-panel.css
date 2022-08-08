@@ -1,0 +1,171 @@
+.sub-wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+.sub-wrapper .sidebar{
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    background-color: #333;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar > div{
+    background-color: #222;
+    width: 100%;
+    padding: 10px 5px;
+    height: auto;
+}
+
+.sidebar > div h2{
+    color: var(--red-orange);
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 1.8rem;
+    padding: 5px;
+    font-family: 'Lato', sans-serif;
+}
+
+.sidebar > div p{
+    color: var(--red-orange);
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.sidebar .links{
+    color: var(--white);
+    padding: 10px 5px;
+    width: 100%;
+    transition: .2s linear;
+    font-size: .9rem;
+}
+
+.sidebar .links:hover{
+    background-color:#222;
+}
+
+.sidebar .links .fa{
+    margin: 0 5px;
+}
+
+.sidebar .links.active{
+    background-color: var(--red-orange);
+}
+
+.content-wrapper{
+    width: 100%;
+    margin-left: 20%;
+    min-height: 100vh;
+    height: auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+.content-bar{
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.title{
+    width: 100%;
+    min-height: 40px;
+    height: 40px;
+    color: var(--red-orange);
+    border-bottom: 2px solid var(--red-orange);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10px;
+    letter-spacing: 3px;
+    cursor: default;
+}
+
+/* ===================================================================DASHBOARD */
+
+.dashboard-grid-container{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(180px, auto);
+    grid-gap: 10px;
+    padding: 0 20px;
+    background-color: #fff;
+    padding-bottom: 20px;
+}
+
+.dashboard-grid-container>div{
+    background: linear-gradient(to bottom right, var(--red-orange), var(--yellow-orange));
+    border-radius: 10px;
+    padding:5px;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    cursor: default;
+}
+
+.dashboard-grid-container>div img{
+    width: 50%;
+    height: 170px;
+    object-fit: contain;
+    filter: brightness(0);
+    padding:10px;
+}
+
+.dashboard-grid-container>div span{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-grid-container>div span .count{
+    color: #fff;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.dashboard-grid-container>div span p{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#totalE{
+    font-size: 2.5rem;
+}
+
+/* ===================================================================ANIMAL-RECORDS */
+#search-animal{
+    padding:5px 10px;
+    border-radius: 10px;
+    border: 1px solid #888;
+}
+
+#search-animal:focus{
+    outline: none;
+    border: 1px solid var(--red-orange);
+}
+
+.fa.fa-search{
+    color: #888;
+}
