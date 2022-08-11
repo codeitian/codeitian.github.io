@@ -1,0 +1,151 @@
+.specific-animal-info-bar{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #eee;
+    padding: 10px;
+    height: 40px;
+    border-top: 2px solid #ddd;
+}
+
+.specific-animal-info-bar li{
+    padding: 0 5px;
+    margin-left: 20px;
+    display: flex;
+}
+
+.specific-animal-info-bar li label{
+   font-weight: 600;
+   padding-right: 5px;
+}
+
+.specific-animal-info-bar li p{
+    color: #333;
+}
+
+
+.more-images{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    height:500px;
+    width: 100%;
+}
+
+.more-images li{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.more-images li img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    background-color: var(--white);
+    box-shadow: 3px 4px 5px rgba(0,0,0,0.5);
+}
+
+.button-container{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.button-container button{
+    padding: 5px 30px;
+    border-radius: 10px;
+    border:0;
+    background:linear-gradient(to right, var(--red-orange), var(--yellow-orange));
+    color: var(--white);
+    font-size: 1rem;
+}
+
+#reservation-form{
+    height: 400px;
+    width: 600px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: default;
+}
+
+#reservation-form label{
+   background-color: var(--red-orange); 
+   width:100%;
+   text-align: center;
+   font-size: 1.2rem;
+   padding: 10px 0;
+   color: var(--white);
+   margin-bottom: 10px;
+}
+
+#reservation-form .top{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 10px 20px;
+}
+
+#reservation-form .top span{
+    width: 100%;
+}
+
+#reservation-form .top p{
+    margin-bottom: 10px;
+}
+
+#reservation-form .top p input{
+    border:0;
+    color: var(--red-orange);
+    font-size: 1rem;
+}
+
+#reservation-form .top img{
+    background-color:#ccc;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border: 1px solid var(--red-orange);
+    border-radius: 10px;
+}
+
+#reservation-form .bottom{
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: justify;
+}
+
+#reservation-form .bottom p{
+    margin-bottom: 10px;
+    line-height: 25px;
+}
+
+#reservation-form .bottom p input[type="checkbox"]{
+    margin-right: 5px;
+}
+
+#reservation-form .bottom button{
+    width: 250px;
+    border: 0;
+    padding: 5px;
+    background:linear-gradient(to right, var(--red-orange), var(--yellow-orange));
+    color: var(--white);
+    border-radius: 20px;
+    margin-top: 20px;
+    opacity: .5;
+}
