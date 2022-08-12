@@ -1,0 +1,526 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --red-orange: rgb(255, 77, 0);
+    --yellow-orange: rgb(255, 183, 0);
+    --white: #fff;
+    --h-text-shadow: 1px 3px 3px rgba(0,0,0,0.5); 
+    --w-button-shadow: 0 0 5px rgba(0,0,0,0.5);
+  }
+
+  html{
+    scrollbar-color: var(--white), var(--red-orange);
+    scrollbar-width: normal;
+  }
+
+  html::-webkit-scrollbar{
+    width: 1vw;
+  }
+
+  html::-webkit-scrollbar-track{
+    background-color: var(--white);
+  }
+
+  html::-webkit-scrollbar-thumb{
+    background-color: #ddd;
+    border-radius: 20px;
+  }
+
+  body{
+    position:relative;
+    background:linear-gradient(to bottom right, var(--red-orange), var(--yellow-orange));
+    height: auto;
+    min-height: 100vh;
+  }
+
+  nav{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    padding: 0 20px;
+  }
+
+  nav .navbarlinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+  }
+
+  nav .navbarlinks .small-logo{
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+    margin-right: 13px;
+  }
+
+  nav .navbarlinks li{
+    margin: 0 13px;
+  }
+
+  nav .navbarlinks li a, a:active, a:visited{
+    font-size: 1rem;
+    color: var(--red-orange);
+  }
+
+  nav .navbarlinks li a:hover,   nav .navbarlinks li a.active{
+    border-bottom: 1px solid var(--red-orange);
+  }
+
+  nav button{
+    padding: 8px 30px;
+    border-radius: 20px;
+    border:0;
+    background:linear-gradient(to right, var(--red-orange), var(--yellow-orange));
+    color: var(--white);
+    font-size: 1rem;
+  }
+
+  .main-wrapper{
+    position: relative;
+    min-height: 100vh;
+    height: auto;
+    width: 100%
+  }
+
+  footer{
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    background-color: var(--white);
+  }
+
+  footer p{
+    font-size: .8rem;
+    color: #888;
+  }
+
+  /* ==================================Form-container */
+  body> .form-container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+.close-form-container-button{
+    color: var(--white);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: default;
+    font-size: 2rem;
+  }
+
+  .close-form-container-button:hover{
+    color: var(--red-orange);
+  }
+
+   /* ==================================Login-Form */
+.login-form{
+  background-color: var(--white);
+  height: 350px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.login-form h2{
+  width: 100%;
+  text-align: center;
+  color: var(--red-orange);
+  font-size: 2.5rem;
+  padding: 20px;
+}
+
+.login-form input{
+  font-size: 1rem;
+  width: 300px;
+  padding: 8px;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid #888;
+  padding-right: 30px;
+}
+
+.login-form input:focus{
+  outline: none;
+  border: 1px solid var(--red-orange);
+}
+
+.login-form span{
+  position: relative;
+  width: auto;
+  height: auto;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.login-form span >.fa{
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  cursor: pointer;
+  color: #888;
+  background-color: var(--white);
+}
+
+.login-form button{
+  width: 300px;
+  padding: 8px 30px;
+  border-radius: 10px;
+  border:0;
+  background:linear-gradient(to right, var(--red-orange), var(--yellow-orange));
+  color: var(--white);
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.login-form p{
+  color: var(--red-orange);
+  font-size: .9rem;
+  cursor: pointer;
+}
+
+.login-form p:hover{
+  text-decoration: underline;
+}
+
+/* ==================================Signup-Form */
+.signup-form{
+  background-color: var(--white);
+  height: 500px;
+  width: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.signup-form > span{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--red-orange);
+  padding:20px;
+}
+
+.signup-form > span h2{
+  font-size: 2.3rem;
+}
+
+.signup-form > span p{
+  font-size: .9rem;
+  font-weight: 100;
+}
+
+.signup-form> div{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.signup-form > div > div{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:flex-start;
+  height: 100%;
+  padding: 20px;
+}
+
+.signup-form > div > div > span{
+  width: 100%;
+  display: flex;
+  margin: 10px 0;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  height: auto;
+  position: relative;
+}
+
+.signup-form > div > div > span label{
+  min-width: 130px;
+  max-width: 130px;
+  color:#555;
+}
+
+
+.signup-form > div > div > span input, .signup-form > div > div > span textarea{
+  font-size: 1rem;
+  width: 200px;
+  padding: 5px 10px;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid #888;
+}
+
+.signup-form > div > div > span .fa{
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  cursor: pointer;
+  color: #888;
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.signup-form > div > div > span textarea{
+  width: 200px;
+  height: 150px;
+  resize: none;
+}
+
+.signup-form > div > div > span input:focus, .signup-form > div > div > span textarea:focus{
+  outline: none;
+  border: 1px solid var(--red-orange);
+}
+
+.signup-form > div > div > span input::placeholder, .signup-form > div > div > span textarea::placeholder{
+  font-size:.8rem;
+}
+
+.signup-form > div > div > button{
+  width: 100%;
+  padding: 8px 30px;
+  border-radius: 10px;
+  border:0;
+  background:linear-gradient(to right, var(--red-orange), var(--yellow-orange));
+  color: var(--white);
+  font-size: 1rem;
+  margin-top: 25px;
+}
+
+#new-password, #retyped-password, #generate-id{
+  padding-right: 30px;
+}
+
+
+    /* ==================================White-button */
+.white-button{
+    width: 110px;
+    padding: 5px 0;
+    border-radius: 20px;
+    border:0;
+    color: var(--red-orange);
+    font-size: 1rem;
+    border: 1px solid transparent;
+    transition: .2s;
+}
+
+.white-button:hover{
+    border: 1px solid rgba(0,0,0,0.3);
+    box-shadow: var(--w-button-shadow);
+    background:var(--white);
+}
+
+/* ==================================Table-for */
+.table-container{
+  width: 100%;
+  max-height: 500px;
+  min-height: 200px;
+  background-color: var(--white);
+  box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+  margin: 0 auto;
+  overflow: auto;
+  margin-bottom: 40px;
+  cursor: default;
+}
+
+.tablefor{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .9rem;
+}
+
+.tablefor th,
+.tablefor td{
+  text-align: left;
+  padding: 10px;
+}
+
+.tablefor thead{
+  background-color:var(--red-orange);
+  color: var(--white);
+}
+
+.tablefor tbody tr:nth-child(odd){
+  background-color: #ddd;
+  margin: 10px 0;
+}
+
+.tablefor tbody tr button{
+  padding: 5px;
+  border: 1px solid var(--red-orange);
+  border-radius: 10px;
+  color: var(--red-orange);
+}
+
+.tablefor tbody tr button:hover{
+  background-color: var(--red-orange);
+  color: var(--white);
+}
+
+.tablefor tbody tr button:hover a{
+  color: var(--white);
+}
+
+.labelfor{
+  width: 100%;
+  border-left: 20px solid var(--yellow-orange);
+  padding-left: 5px;
+  color: var(--yellow-orange);
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+   /* ==================================Loggin Out*/
+.logOut{
+  height: 180px;
+  width: 300px;
+  background-color:var(--white);
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  cursor: default;
+  border: 1px solid var(--red-orange);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+.logOut p{
+  width: 100%;
+  text-align: center;
+  color: var(--red-orange);
+  font-size:1rem;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--red-orange);
+  padding: 10px;
+}
+
+.logOut span{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.logOut button{
+  height: 30px;
+  width: 100px;
+  background-color: #ddd;
+  border: 1px solid  var(--red-orange);
+  padding: 5px;
+  border-radius: 10px;
+  color: var(--red-orange);
+}
+
+.logOut button:hover{
+  background-color: var(--red-orange);
+  color: var(--white);
+}
+
+ /* ==================================MESSAGEBOX*/
+ .messagebox-delete, .messagebox-confirmation{
+  height: auto;
+  width: 300px;
+  background-color:var(--white);
+  padding: 25px 10px;
+  padding-top: 10px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  cursor: default;
+  border: 2px solid var(--red-orange);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+.messagebox-delete p, .messagebox-confirmation p{
+  width: 100%;
+  text-align: center;
+  color: var(--red-orange);
+  font-size:1rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--red-orange);
+  padding: 10px;
+}
+
+.messagebox-delete input[type="password"], .messagebox-confirmation  input[type="password"]{
+  width: 100%;
+  border: 1px solid #888;
+  padding: 5px 10px;
+  font-size:1rem;
+  border-radius: 10px;
+  margin: 0 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.messagebox-delete input[type="password"]:focus, .messagebox-confirmation input[type="password"]:focus{
+  outline: none;
+  border: 1px solid var(--red-orange);
+}
+
+.messagebox-delete input[type="password"]::placeholder, .messagebox-confirmation input[type="password"]::placeholder{
+  text-align: center;
+}
+
+.messagebox-delete span, .messagebox-confirmation span{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.messagebox-delete button, .messagebox-confirmation  button{
+  height: 30px;
+  width: 100px;
+  background-color: #ddd;
+  border: 1px solid  var(--red-orange);
+  padding: 5px;
+  border-radius: 10px;
+  color: var(--red-orange);
+}
+
+.messagebox-delete button:hover, .messagebox-confirmation button:hover{
+  background-color: var(--red-orange);
+  color: var(--white);
+}
