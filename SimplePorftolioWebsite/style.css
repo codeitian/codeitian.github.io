@@ -1,0 +1,325 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --myblue: #0033cc;
+}
+
+body{
+    position: relative;
+}
+
+nav{
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--myblue);
+    z-index: 11;
+}
+
+nav .logo{
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    margin-left: 10px;
+}
+
+nav .navbarlinks{
+    width: 100%;
+    display: none;
+    height: auto;
+    background-color: rgba(223, 232, 246, 0.7);
+    backdrop-filter: blur(1.5px);
+}
+
+nav .navbarlinks li{
+    width:100%;
+    height: fit-content;
+}
+
+nav .navbarlinks li a{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    color: #444;
+    transition: all .3s linear;
+    font-size: 1.2rem;
+}
+
+nav .navbarlinks li a:hover, .active{
+    color: var(--myblue) !important;
+    background-color: #0033cc3c;
+    text-shadow: 0 0 1px rgba(0,0,0, 0.5);
+}
+
+.hbutton{
+    position:absolute;
+    font-size: 2rem !important;
+    color: #fff;
+    top: 10px;
+    right: 10px;
+}
+/* /////////////////////////////////////////////////////////////////////////// */
+.home-section{
+    padding-top: 50px;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom, var(--myblue), rgba(255,255,255, 0.1));
+    position:relative;
+}
+
+.home-section .jumbotron{
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height: 250px;
+    background-color: #fff;
+    padding:20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 1px solid #888;
+}
+
+.home-section .jumbotron p{
+    padding: 10px 0;
+}
+
+.home-section .jumbotron .link-wrapper{
+    position: absolute;
+    left:0;
+    bottom: 20px;
+    display: flex;
+    width:100%;
+    height: auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.home-section .jumbotron .link-wrapper a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.home-section .jumbotron .link-wrapper #works-link{
+    background-color: transparent;
+    border: 1px solid var(--myblue);
+    color: var(--myblue) !important;
+}
+
+.home-section .jumbotron .link-wrapper #cv-link{
+    background-color: var(--myblue);
+    border: 1px solid transparent;
+    color: #fff !important;
+}
+
+.home-section .jumbotron h1{
+    font-size:  2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* /////////////////////////////////////////////////////////////////////////// */
+.about-section{
+    position: relative;
+    padding-top: 50px;
+    height: auto;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #888;
+}
+
+.about-section h1{
+    text-align: center;
+    display: block;
+}
+
+.about-section img{
+    object-fit: cover;
+    object-position: 20%;
+    display: flex;
+    margin: 20px auto;
+    width: 90%;
+    height: 200px;
+    filter: hue-rotate(190deg);
+}
+
+.about-section p{
+    text-align: justify;
+    margin: 20px;
+    text-indent: 50px;
+}
+
+.skills{
+    width:100%;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    
+}
+
+.skills h3{
+    padding-bottom: 5px;
+}
+
+.skills li{
+    list-style: disc inside !important;
+    padding: 5px 0;
+}
+
+.skills h2{
+    color: var(--myblue) !important;
+    margin-bottom: 10px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////// */
+.works-section{
+    position: relative;
+    padding-top: 50px;
+    height: auto;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #888;
+}
+
+.works-section h1{
+    text-align: center;
+    padding-bottom: 20px;
+    display: block;
+}
+
+.works-section p{
+    padding: 0 20px;
+    width: 100%;
+    text-align: left;
+}
+
+.grid-container{
+    height: auto;
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 100px;
+    grid-gap: 10px;
+}
+
+.grid-container div{
+    background-color:var(--myblue);
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 3px 5px rgba(31, 32, 34, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.grid-container div img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.works-section .project-container{
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:flex-start;
+}
+
+.works-section .project-container img{
+    display: flex;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    margin: 0 auto;
+    box-shadow: 0 3px 5px rgba(31, 32, 34, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.works-section  .project-container h3{
+    padding-bottom: 20px;
+}
+
+.works-section  .project-container .app-link{
+    background-color: var(--myblue);
+    margin: 20px auto;
+    width: 100%;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    color: #fff;
+    border-radius: 20px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////// */
+.contact-section{
+    position: relative;
+    padding-top: 50px;
+    height: auto;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #888;
+}
+
+.contact-section h1{
+    text-align: center;
+    padding-bottom: 20px;
+    display: block;
+}
+
+.contact-section p{
+    padding: 0 20px;
+    width: 100%;
+    text-align: left;
+}
+
+.contact-section ul{
+    width: 100%;
+    height: auto;
+    padding: 10px 20px;
+}
+
+.contact-section ul li{
+    padding: 5px 0;
+    color: var(--myblue) !important;
+    font-size: 1.2rem;
+}
+
+.contact-section ul li a{
+    color: var(--myblue) !important;
+    margin-left: 10px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////// */
+footer{
+    width:100%;
+}
+
+footer p{
+    padding: 20px;
+    color: #888;
+    text-align: center;
+}
