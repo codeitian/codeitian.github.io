@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito+Sans&family=Orbitron:wght@500&family=Poppins&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="images/myOfficialLogoWhite.png" type="image/x-icon">
+
+    <title>Home | Christian Virrey</title>
+</head>
+<body>
+    <nav>
+        <img src="images/myOfficialLogoWhite.png" alt="" class="logo">
+        <ul class="navbarlinks">
+            <li class="links"><a href="#home">Home</a></li>
+            <li class="links"><a href="#about">About Me</a></li>
+            <li class="links"><a href="#works">Works</a></li>
+            <li class="links"><a href="#contact">Contact</a></li>
+        </ul>
+
+        <i class="fa fa-bars hbutton" aria-hidden="true"></i>
+    </nav>
+    
+    <section id="home" class="home-section">
+      <img src="images/myOfficialLogoWhite.png" alt="" class="logo-header">
+      <div class="jumbotron">
+        <p>Hey there, I am</p>
+        <h1>Christian Virrey</h1>
+        <p>A digital artist and web developer.</p>
+          <div class="link-wrapper">
+            <a href="file/cvvirrey.pdf" download id="cv-link">Download CV</a>
+            <a href="#works" id="works-link">See Works</a>
+          </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h1>ABOUT ME</h1>
+        <img src="images/designer.png" alt="">
+        <p>
+            I am passionate about digital art and web developing. I can create masterpieces in digital arts, I fancy drawing a lot, with the help of technology I can be more creative and use it in many different styles.
+        </p>
+
+        <p>
+          In web development I can do both front-end and back-end coding. Coding in front-end showcases my creative side as a person and coding in back-end challenges my logical thinking which I hate and like at the same time.
+        </p>
+
+        <ul class="skills">
+          <h2>Hard Skills</h2>
+          <h3>Digital Arts</h3>
+            <li>Photoshop</li>
+            <li>Adobe Illustrator</li>
+            <li>Ibis Paint X</li>
+          <br>
+          <h3>Web Development</h3>
+            <li>HTML and CSS</li>
+            <li>Javascript/jQuery</li>
+            <li>Bootstrap</li>
+            <li>PHP</li>
+            <li>MySQL</li>
+        </ul>
+
+        <ul class="skills">
+          <h2>Soft Skills</h2>
+          <li>Time Management</li>
+          <li>Critical Thinking</li>
+          <li>Willing to learn</li>
+          <li>Flexible</li>
+          <li>Resilient</li>
+        </ul>
+     </section>
+
+     <div class="big-img-container">
+      <span class="close-img-container">CLOSE</span>
+      <img src="" alt="" id="big-img">
+    </div>
+
+     <section id="works" class="works-section">
+      <h1>WORKS</h1>
+      <p>Here are some of my <span>digital artworks</span>.</p>
+
+        <div class="grid-container">
+            <div><img src="images/1.jpg" alt="" onclick="openImage(this.src)"></div>
+            <div><img src="images/2.jpg" alt="" onclick="openImage(this.src)"></div>
+            <div><img src="images/3.jpg" alt="" onclick="openImage(this.src)"></div>
+            <div><img src="images/4.jpg" alt="" onclick="openImage(this.src)"></div>
+            <div><img src="images/5.jpg" alt="" onclick="openImage(this.src)"></div>
+            <div><img src="images/6.jpg" alt="" onclick="openImage(this.src)"></div>
+            <div><img src="images/7.jpg" alt="" onclick="openImage(this.src)"></div>
+            <div><img src="images/8.jpg" alt="" onclick="openImage(this.src)"></div>
+            <div><img src="images/9.jpg" alt="" onclick="openImage(this.src)"></div>
+        </div>
+
+        <p>Here are some of <span>dynamic webpages</span> I developed.</p>
+
+        <div class="project-container">
+          <h3>1. Test Score Calculator</h3>
+          <p>This is a simple web application to see if you passed in your exam/quiz. This is developed using PHP and MySQL so a user can saved their testing history.</p>
+          <img src="images/app1.png" alt="">
+          <a href="https://mytestscores.000webhostapp.com" target="_blank" class="app-link" >VISIT WEBSITE</a>
+        </div>
+     </section>
+
+     <section id="contact" class="contact-section">
+      <h1>GET IN TOUCH</h1>
+      <p>Here are my social media accounts:</p>
+      <ul>
+        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="">christianvirrey613@gmail.com</a></li>
+        <li><i class="fa fa-facebook-official" aria-hidden="true"></i><a href="https://web.facebook.com/ChristianVirrey8" target="_blank">Christian Virrey</a></li>
+        <li><i class="fa fa-instagram" aria-hidden="true"></i><a href="https://www.instagram.com/chrstnvirrey" target="_blank">chrstnvirrey</a></li>
+        <li><i class="fa fa-github-square" aria-hidden="true"></i><a href="https://github.com/codeitian" target="_blank">codeitian</a></li>
+      </ul>
+
+      <p>You can message using this form</p>
+
+      <form action="" method='POST'>
+          <label for="">Name:</label>
+          <input type="text" name="" id=""  class="inputs" required>
+          <label for="">Email:</label>
+          <input type="email" name="" id=""  class="inputs" required>
+          <label for="">Your message:</label>
+          <textarea name="" id="" cols="30" rows="10"  class="inputs" required></textarea>
+          <button type="submit" id="send-btn">SEND</button>
+      </form>
+     </section>
+
+     <footer>
+        <p>©2022 by Christian Virrey</p>
+     </footer>
+</body>
+
+<script src="js/toggle.js"></script>
+<script src="js/gallery.js"></script>
+</html>
