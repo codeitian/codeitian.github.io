@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>RSP Game</title>
+</head>
+<body>
+
+<div class="startScreen">
+    <h2>Welcome!</h2>
+    <h1>Rock Paper Scissor</h1>
+    <p >Enter Name:</p>
+    <input type="text" id="playerName" placeholder="Enter Your Name"><br>
+    <p id="bestScoreText">Set best score.</p>
+    <input type="number" id="bestScore" placeholder="Enter Best Score"><br>
+    <button id="startBtn" onclick="start()">START</button>
+</div>
+
+<div class="gameArea">
+
+    <div class="scoreboard">
+        <p>Robot</p>
+        <p>BEST</p>
+        <p class="enteredName">Player 1</p>
+    </div>
+    
+    <div class="scoreboard">
+        <p class="aiScore">0</p>
+        <p class="bestScoreGoal">0</p>
+        <p class="playerScore">0</p>
+    </div>
+
+    <div class="space">
+        <img id="emojiAI" src="images/madai.png" alt="">
+        <div>
+            <img id="displayAI" src="images/rock.png" alt="">
+            <img id="displayHuman" src="images/rock.png" alt="">
+        </div>
+        <img id="emojiHUMAN" src="images/madhuman.png" alt="">
+    </div>
+
+    <div class="choices">
+        <button onclick="proceed('rock')">Rock</button>
+        <button onclick="proceed('paper')">Paper</button>
+        <button onclick="proceed('scissor')">Scissor</button>
+    </div>
+</div>
+
+
+    
+</body>
+</html>
+<script src="main.js" defer></script>

@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.scoreboard{
+    width:95%;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+
+.startScreen{
+    height: 100vh;
+    top:0;
+    width: 100%;
+    background-color: rgb(41, 193, 41);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.space{
+    width:95%;
+    height: auto;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.space > img{
+    height: auto;
+    width: 20%;
+    object-fit: contain;
+}
+
+.space > div{
+    width:300px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.space > div img{
+    height: 40%;
+    width: 40%;
+    max-height: 40%;
+    min-width: 40%;
+    max-height: 40%;
+    min-width: 40%;
+    object-fit: contain;
+}
+
+.choices{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
