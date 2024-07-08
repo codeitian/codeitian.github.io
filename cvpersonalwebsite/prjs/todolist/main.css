@@ -1,0 +1,139 @@
+*{
+    padding:0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background-color: #fff;
+}
+
+#todoContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+#theContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+
+#theContainer form{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 20px;
+    width: 30%;
+    margin: 0 auto;
+    max-width: 500px;
+    box-shadow: 0 0 7px rgba(0, 0, 194, 0.2),
+                0 0 20px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+
+#theContainer form h3{
+    margin-bottom:10px;
+    text-transform: uppercase;
+}
+
+#theContainer form input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding:5px;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+#theContainer form input:focus{
+    border: 1px solid navy;
+}
+
+#theContainer form button{
+    width: 100%;
+    margin-bottom: 10px;
+    padding:5px;
+    border-radius: 3px;
+    border:0;
+}
+
+#theContainer form button:nth-child(3){
+    background-color: navy;
+    color: #fff;
+}
+
+#theContainer form button:nth-child(4){
+    background-color: #aaa;
+    color: #fff;
+}
+
+
+#theContainer ul{
+    height: 100vh;
+    width: 50%;
+}
+
+#todoContainer{
+    background-color: #ccc;
+}
+
+#todoContainer li{
+    width: 100%;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#todoContainer li:nth-child(odd){
+     background-color: #ddd;
+}
+
+#todoContainer li button{
+    background-color: red;
+    color: #fff;
+    padding: 5px;
+    border:0;
+    border-radius: 3px;
+    font-size: 10px;
+    z-index: 1111;
+}
+
+
+@media screen and (max-width:600px) {
+    #theContainer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    #theContainer form{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 20px;
+        margin-left: 0;
+        margin: 20px auto;
+        width: 90%;
+        box-shadow: 0 0 7px rgba(0, 0, 194, 0.2),
+                    0 0 20px rgba(0,0,0,0.1);
+        border-radius: 5px;
+    }
+
+    #theContainer ul{
+        height: 100vh;
+        width: 100%;
+    }
+    
+}

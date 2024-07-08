@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Basic Calculator</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <section class="calculator">
+        <p><span>CVirrey</span><span class="oprtrIdentifier">+</span></p>
+        <input type="text" id="txtArea" placeholder="0" disabled>
+        <div class="equationsContainer">
+            <span>
+                <button onclick="AC()">AC</button>
+                <button onclick="pop()">←</button>
+            </span>
+            <span>
+                <button onclick="div()">/</button>
+                <button onclick="mult()">x</button>
+                <button onclick="sub()">-</button>
+                <button onclick="add()">+</button>
+
+            </span>
+        </div>
+        <div class="buttonsContainer">
+            <button onclick="append(this.value)" value="7">7</button>
+            <button onclick="append(this.value)" value="8">8</button>
+            <button onclick="append(this.value)" value="9">9</button>
+            <button onclick="append(this.value)" value="4">4</button>
+            <button onclick="append(this.value)" value="5">5</button>
+            <button onclick="append(this.value)" value="6">6</button>
+            <button onclick="append(this.value)" value="1">1</button>
+            <button onclick="append(this.value)" value="2">2</button>
+            <button onclick="append(this.value)" value="3">3</button>
+            <button onclick="append(this.value)" value=".">.</button>
+            <button onclick="append(this.value)" value="0">0</button>
+            <button class="equalBtn" onclick="equals()">=</button>
+        </div>
+    </section>
+</body>
+</html>
+
+<script>
+    const txtArea = document.getElementById('txtArea');
+    let oprtrIdentifier = document.querySelector('.oprtrIdentifier');
+    let operator = "";
+    let firstNumber = 0;
+    let secondNumber = 0;
+    let isSet = false;    
+
+    function pop(){
+        let currentValue = txtArea.value;
+        let newValue = currentValue.slice(0, currentValue.length - 1);
+        // let newStr = str.slice(0, -1);
+        txtArea.value = newValue;
+    }
+
+    function add(){
+        firstNumber = txtArea.value;
+        operator = `+`;
+        oprtrIdentifier.textContent = `+`;
+        txtArea.value = "";
+        txtArea.placeholder = firstNumber; 
+        isSet = true;
+    }
+    function sub(){
+        firstNumber = txtArea.value;
+        operator = `-`;
+        oprtrIdentifier.textContent = `-`;
+        txtArea.value = "";
+        txtArea.placeholder = firstNumber; 
+        isSet = true;
+    }
+    function mult(){
+        firstNumber = txtArea.value;
+        operator = `*`;
+        oprtrIdentifier.textContent = `*`;
+        txtArea.value = "";
+        txtArea.placeholder = firstNumber; 
+        isSet = true;
+    }
+    function div(){
+        firstNumber = txtArea.value;
+        operator = `/`;
+        oprtrIdentifier.textContent = `/`;
+        txtArea.value = "";
+        txtArea.placeholder = firstNumber; 
+        isSet = true;
+    }
+
+    if(isSet == false){
+      
+        console.log(isSet);
+    }else{
+        console.log(isSet);
+        // function append(number){
+        //    
+        // }
+    }
+
+    function append(number){
+            if(!isSet){
+                txtArea.value = txtArea.value + number;
+            }else{
+                
+                txtArea.value = txtArea.value + number;
+                secondNumber = txtArea.value;
+            }
+        }
+
+    function equals(){
+        console.log(secondNumber);
+        let ans = "";
+        switch (operator) {
+        case '+':
+            ans = parseFloat(firstNumber) +  parseFloat(secondNumber);
+            
+            break;
+        case '-':
+            ans = parseFloat(firstNumber) -  parseFloat(secondNumber);
+            
+            break;
+        case '*':
+            ans = parseFloat(firstNumber) *  parseFloat(secondNumber);
+            
+            break;
+        case '/':
+            ans = parseFloat(firstNumber) /  parseFloat(secondNumber);
+            
+            break;
+        default:
+            console.log('Invalid operator');
+    }
+        
+        txtArea.value = ans;
+        isSet = false;
+        
+    }
+
+
+    function AC(){
+        txtArea.value = "";
+        firstNumber = 0;
+        secondNumber = 0;
+        isSet = false;
+        oprtrIdentifier.textContent = `+`;
+        operator = "";
+        txtArea.placeholder = 0;
+    }
+</script>

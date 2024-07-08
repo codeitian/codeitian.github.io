@@ -1,0 +1,134 @@
+*{
+    cursor: default;
+}
+
+#mainContainer > ul{
+    width: 88%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#mainContainer > ul li{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px 23px;
+    position: relative;
+    font-size: 13px;
+}
+
+#mainContainer > ul li span{
+    position: absolute;
+    min-height: 13px;
+    min-width: 13px;
+    max-height: 13px;
+    max-width: 13px;
+    background-color:var(--primary);
+    margin-right: 10px;
+    border-radius: 50%;
+    left:0;
+}
+
+#mainContainer > ul li:nth-child(2){
+    font-size: 14px;
+    letter-spacing: 1.5px;
+}
+
+.skillsContainer{
+    width:88%;
+    margin:0 auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.skillsContainer > div{
+    width:49.5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: linear-gradient(to bottom right, rgba(255,255,255,0.03), rgba(255,255,255,0.1)) ;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 5px;
+    padding:10px 20px;
+}
+.skillsContainer > div > p{
+    border-bottom: 1px solid #888;
+    margin-bottom: 10px;
+}
+
+.skillsContainer > div ul{
+    height: auto;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.skillsContainer > div ul li{
+    padding:5px 0;
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.skillsContainer > div ul li span{
+    width: 100%;
+    background-color: #777;
+    height: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.skillsContainer > div ul li p{
+    line-height: 20px;
+}
+
+.skillsContainer > div ul li span::before{
+    content:"";
+    width: 0%;
+    background:linear-gradient(to right, var(--primary), yellowgreen) ;
+    top:0;
+    left:0;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.skillsContainer > div ul li:nth-child(1) span::before {
+    width: 79%;
+}
+.skillsContainer > div ul li:nth-child(2) span::before {
+    width: 84%;
+}
+.skillsContainer > div ul li:nth-child(3) span::before {
+    width: 85%;
+}
+.skillsContainer > div ul li:nth-child(4) span::before {
+    width: 92%;
+}
+
+@media screen and (max-width:600px) {
+    .skillsContainer{
+        width:100%;
+        margin:0 auto;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+
+    .skillsContainer > div{
+        width: 88%;
+        margin:0 auto;
+        margin-bottom: 20px;
+    }
+}

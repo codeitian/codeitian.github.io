@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Form Validation</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <div class="successMsg">
+        <p id="msgText">Registration Success! <br> <br>
+            Hi there !
+        </p>
+    </div>
+    <form action="">
+        <label for="firstName">First Name </label>
+        <input type="text" id="fnTxt" required>
+        <label for="lastName">Last Name </label>
+        <input type="text" id="lnTxt" required>
+        <label for="email">Email</label>
+        <input type="email" id="emailTxt" placeholder="example123@gmail.com">
+        <label for="email">Password</label>
+        <input type="password" name="" id="pwTxt" onkeyup="checkPassword(this.value)">
+        <div class="reqContainer">
+            <span><input type="checkbox" name="" id="clChck" disabled><label for="">Capital letter</label></span>
+            <span><input type="checkbox" name="" id="noChck" disabled><label for="">Has Number</label></span>
+            <span><input type="checkbox" name="" id="symbolChck" disabled><label for="">Has Symbol</label></span>
+            <span><input type="checkbox" name="" id="charChck" disabled><label for="">8 or more char</label></span>
+        </div>
+        <label for="email" id="vpwLabel" style="display:none;">Verify Password</label>
+        <input type="password" name="" id="vpwTxt" style="display:none;" onkeyup="checkPasswords(this.value)">
+        
+        <button type="button" id="submitBtn" style="opacity:.5" onclick="ok(event)" disabled>REGISTER</button>
+    </form>
+    <br><br>
+</body>
+</html>
+<script>
+    window.addEventListener('load', () =>{
+        document.getElementById('fnTxt').focus();
+        if (isEdge()) {
+        console.log("The browser is Microsoft Edge");
+        } else {
+            console.log("The browser is not Microsoft Edge");
+        }
+    })
+
+    let pwReq = document.getElementById('pwTxt');
+    pwReq.addEventListener('focus', () =>{
+        document.querySelector('.reqContainer').style = "display: flex;";
+    })
+    // pwReq.addEventListener('blur', () =>{
+    //     document.querySelector('.reqContainer').style = "display: none;";
+    // })
+
+
+    function isEdge() {
+    return /Edg/.test(navigator.userAgent);
+    }
+
+    if (isEdge()) {
+        console.log("The browser is Microsoft Edge");
+    } else {
+        console.log("The browser is not Microsoft Edge");
+    }
+
+    let pw = "";
+
+    function checkPWCase(str){
+        return /[A-Z]/.test(str);
+    }
+
+    function checkNumber(str){
+        return /\d/.test(str);
+    }
+
+    function checkSymbol(str){
+        return /[!@#$%^&*(),.?":{}|/<>]/.test(str);
+    }
+    function checkChars(str){
+        if(str.length >= 8 ){
+            return true;
+        }else{
+            return false;
+        } 
+    }
+
+    function checkPassword(str){
+        if( checkPWCase(str)){
+            document.getElementById('clChck').checked = true;
+        }else{
+            document.getElementById('clChck').checked = false;
+        }
+        
+        if(checkNumber(str)){
+            document.getElementById('noChck').checked = true;
+        }else{
+            document.getElementById('noChck').checked = false;
+        }
+
+        if( checkSymbol(str)){
+            document.getElementById('symbolChck').checked = true;
+        }else{
+            document.getElementById('symbolChck').checked = false;
+        }
+
+        if( checkChars(str)){
+            document.getElementById('charChck').checked = true;
+
+        }else{
+            document.getElementById('charChck').checked = false;
+        }
+
+        if(
+            checkPWCase(str) == true &&
+            checkNumber(str) == true &&
+            checkSymbol(str) == true &&
+            checkChars(str) == true
+        ){
+            document.getElementById('vpwTxt').style = "display:  flex;";
+            document.getElementById('vpwLabel').style = "display:  block;";
+        }else{
+            document.getElementById('vpwTxt').style = "display:  none;";
+            document.getElementById('vpwLabel').style = "display:  none;";
+        }
+
+        pw = str;
+    }
+
+    function checkPasswords(str1){
+        console.log(pw);
+        console.log(str1);
+        if(pw === str1){
+            document.getElementById('submitBtn').style = "opacity:1;";
+            document.getElementById('submitBtn').disabled = false;
+        }else{
+            document.getElementById('submitBtn').style = " opacity:.5;";
+            document.getElementById('submitBtn').disabled = true;
+        }
+    }
+
+
+    function ok(e){
+        e.preventDefault();
+
+        if(document.getElementById('fnTxt').value == ""){
+            document.getElementById('fnTxt').focus();
+        }
+
+        if(document.getElementById('lnTxt').value == ""){
+            document.getElementById('lnTxt').focus();
+        }
+
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if(emailPattern.test(document.getElementById('emailTxt').value) == false ){
+            document.getElementById('emailTxt').focus();
+            document.getElementById('emailTxt').style = "border: 1px solid #f00;";
+            window.alert("Please input a valid Email Address.");
+            return;
+        }
+
+
+        let name =  `${document.getElementById('fnTxt').value  + " " + document.getElementById('lnTxt').value }`;
+        document.querySelector('.successMsg').style = "display: block";
+        document.querySelector('#msgText').innerHTML = `Registration Success! <br><br> Hi There! ${name}.`;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        
+        document.getElementById('vpwTxt').style = "display:  none;";
+        document.getElementById('vpwLabel').style = "display:  none;";
+        document.querySelector('.reqContainer').style = "display: none;";
+        document.getElementById('fnTxt').value = "";
+        document.getElementById('lnTxt').value = "";
+        document.getElementById('emailTxt').value = "";
+        document.getElementById('pwTxt').value = "";
+        document.getElementById('vpwTxt').value = "";
+        document.getElementById('clChck').checked = false;
+        document.getElementById('noChck').checked = false;
+        document.getElementById('symbolChck').checked = false;
+        document.getElementById('charChck').checked = false;
+
+    }
+
+</script>
