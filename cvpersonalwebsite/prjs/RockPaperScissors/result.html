@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSP Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <img src="images/okhuman.png" alt="" id="resultIMG">
+    <h1 id="winnerName"></h1>
+    <br>
+    <a href="index.html" class="okBTN">OK</a>
+</body>
+</html>
+<script>
+     // Get the value of the "player" parameter from the URL
+     const playerValue = new URLSearchParams(window.location.search).get('player');
+
+    if(playerValue === "robot"){
+        document.getElementById("winnerName").textContent = "YOU LOSE!";
+        document.getElementById("resultIMG").src = "images/sadhuman.png";
+    }else{
+        document.getElementById("winnerName").textContent = playerValue + " YOU WON!";
+        document.getElementById("resultIMG").src = "images/okhuman.png";
+    }
+</script>

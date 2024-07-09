@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: To Do List</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <section id="theContainer">
+        
+        <form action="">
+            <h3> Add To Do</h3>
+            <input type="text" id="todo" autocomplete="off">
+            <button type="button" onclick="add()" id="addBtn">Add</button>
+            <button type="button" id="updateBtn" style="display:none">Update</button>
+            <button type="reset" id="clearBtn" onclick="clickClear(this)">Clear</button>
+        </form>
+
+        <ul id="todoContainer">
+            
+        </ul>
+
+        
+    </section>
+
+    
+</body>
+</html>
+
+<script>
+    let todoId = 1; // Move todoId outside the add function to maintain its state
+    let addBtn = document.getElementById("addBtn"); 
+    let updateBtn = document.getElementById("updateBtn"); 
+    let clearBtn = document.getElementById("clearBtn"); 
+    
+    
+    function add(){
+        let todo = document.getElementById("todo").value; 
+        const todoContainer = document.getElementById("todoContainer");
+
+        if(todo){
+            let li = document.createElement("li");
+            li.textContent = todo;
+            let delBtn = document.createElement("button");
+            delBtn.style.marginLeft = "10px"; // Use style property directly
+            delBtn.textContent = "DEL";
+            let currentTodoId = todoId; // Capture current todoId for this todo
+            delBtn.id = "todoID" + currentTodoId;
+            li.id = "rowID" + currentTodoId;
+            li.dataset.context = todo;
+            delBtn.className = "delBtn";
+
+            delBtn.addEventListener('click', function() {
+                deleteTodo("todoID" + currentTodoId, event); // Call deleteTodo with the correct ID
+            });
+
+            li.addEventListener('click', function() {
+                selectRow("rowID" + currentTodoId,  li.dataset.context, "todoID" + currentTodoId); // Call deleteTodo with the correct ID
+            });
+
+
+            li.appendChild(delBtn);
+            todoContainer.appendChild(li);
+            todoId++; // Increment todoId after creating todo
+
+            document.getElementById("todo").value = "";
+        } else {
+            document.getElementById("todo").focus();
+        }
+    }
+
+    function deleteTodo(id, event){
+        event.stopPropagation();
+        document.getElementById(id).parentNode.remove(); // Remove the parent li of the button
+        clearBtn.click();
+        clearBtn.textContent = "Clear";
+
+        if(updateBtn.style.display == "block"){
+            updateBtn.style.display = "none";
+        }
+
+        document.getElementById("todo").value = "";
+    }
+
+    function selectRow(id, context, buttonID ){
+        let todo = document.getElementById("todo");
+        todo.value = context;
+        console.log(context);
+
+        updateBtn.style = "display:block;";
+        addBtn.style = "display:none;";
+        clearBtn.textContent = "Cancel";
+
+        updateBtn.addEventListener('click', () => {
+            updateData(id, buttonID);
+        })
+    }
+
+    function clickClear(btn){
+        btn.textContent = "Clear";
+        addBtn.style = "display:block;";
+        updateBtn.style = "display:none;";
+    }
+
+    function updateData(id, buttonID){
+        let newTodo = document.getElementById("todo").value;
+        let selectRow = document.getElementById(id);
+        selectRow.dataset.context = newTodo;
+        let delBtn = document.createElement("button");
+            delBtn.style.marginLeft = "10px"; // Use style property directly
+            delBtn.textContent = "DEL";
+            delBtn.id = buttonID;
+            delBtn.addEventListener('click', function() {
+                deleteTodo(buttonID, event); // Call deleteTodo with the correct ID
+            });
+
+            selectRow.innerHTML = newTodo;
+            selectRow.appendChild(delBtn);
+        document.getElementById("todo").value = "";
+        addBtn.style = "display:block;";
+        updateBtn.style = "display:none;";
+        clearBtn.textContent = "Clear";
+    }
+</script>
+
+
