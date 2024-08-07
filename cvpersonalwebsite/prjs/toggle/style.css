@@ -1,0 +1,79 @@
+:root{
+    --bgcolor: #fff;
+    --fontcolor:#1f1f1f;
+    --primary:#789cff;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Roboto", sans-serif;
+    /* font-size: 12px; */
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: .3s ease-in;
+}
+
+.dark-mode{
+    background-color: var(--bgcolor);
+}
+
+button{
+    /* background: linear-gradient(to bottom right, #fff, rgb(137, 165, 231)); */
+    background-color: skyblue;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    border: 0;
+    position: relative;
+    transition: .3s ease-in;
+    box-shadow: inset 0 0 4px rgba(0,0,0,0.4);
+    overflow: hidden;
+}
+
+button.dark{
+    /* background: linear-gradient(to bottom right, #363636,#111); */
+    background-color: #111;
+}
+
+button .star{
+    background-color: #f3f369;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left:0;
+    height: 38px;
+    width: 38px;
+   
+    border-radius: 50% ;
+    transition: .3s ease-in;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.4),
+                -2px -2px 5px rgba(255,255,255,0.4);
+}
+
+
+/* button::after{
+    content: '';
+    position: absolute;
+    top:-2px;
+    left:-2px;
+    height: 0;
+    width: 0;
+    z-index: -1;
+    border-radius: 20px;
+    filter: blur(5px);
+    background: linear-gradient(to bottom right, purple, navy, turquoise);
+}
+
+button:hover::after{
+    height: 45px;
+    width: 155px;
+} */
