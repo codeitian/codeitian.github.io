@@ -134,6 +134,7 @@ body{
     padding:15% 10% 20px 10%;
     font-weight: 300;
     border-bottom: 4px double rgba(0,0,0,0.4);
+    padding-bottom: 20px;
 }
 
 #card1 .jen{
